@@ -15,7 +15,7 @@ Antes de rodar os testes, certifique-se de ter os seguintes pré-requisitos inst
 ### Instalando as dependências do projeto
 
 1. Clone o repositório:
-   git clone git@github.com:jonathanmotta/dog-api-tests.git
+   git clone git@github.com:jonathanmotta/dog-api-tests.git ou https://github.com/jonathanmotta/dog-api-tests.git
 
 2. Navegue até o diretório do projeto:
 cd dog-api-tests
