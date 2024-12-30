@@ -54,7 +54,9 @@ public class DogApiTests {
                 .statusCode(200)
                 .body("status", equalTo("success"))
                 .body("message", notNullValue())
-                .body("message", everyItem(containsString("https://")));
+                .body("message", everyItem(containsString("https://")))
+                .assertThat()
+                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("breed-images-schema.json"));
     }
 
     @Test
