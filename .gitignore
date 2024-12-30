@@ -1,3 +1,13 @@
+# Pasta de resultados do Allure
+.allure/
+
+# Pasta de configuração do IntelliJ IDEA
+.idea/
+
+# Pasta de configurações do Maven
+.mvn/
+
+# Diretório de build Maven
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
