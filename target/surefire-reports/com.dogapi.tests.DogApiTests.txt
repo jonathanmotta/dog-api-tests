@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.dogapi.tests.DogApiTests
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.398 s -- in com.dogapi.tests.DogApiTests
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.769 s -- in com.dogapi.tests.DogApiTests
