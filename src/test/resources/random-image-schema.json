@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": ["success"]
+    },
+    "message": {
+      "oneOf": [
+        {
+          "type": "string",
+          "pattern": "^https://"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^https://"
+          }
+        }
+      ]
+    }
+  },
+  "required": ["status", "message"]
+}

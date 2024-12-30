@@ -1,6 +1,7 @@
 package com.dogapi.tests;
 
 import io.restassured.RestAssured;
+import io.restassured.module.jsv.JsonSchemaValidator;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.Matchers.*;
@@ -22,7 +23,9 @@ public class DogApiTests {
                 .statusCode(200)
                 .body("status", equalTo("success"))
                 .body("message", notNullValue())
-                .body("message.size()", greaterThan(0));
+                .body("message.size()", greaterThan(0))
+                .assertThat()
+                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("breeds-schema.json"));
     }
 
     @Test
@@ -79,7 +82,8 @@ public class DogApiTests {
                 .then()
                 .statusCode(200)
                 .body("status", equalTo("success"))
-                .body("message", containsString("https://"));
+                .assertThat()
+                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("random-image-schema.json"));
     }
 
     @Test
