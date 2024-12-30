@@ -83,8 +83,7 @@ public class DogApiTests {
                 .statusCode(200)
                 .body("status", equalTo("success"))
                 .assertThat()
-                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("random-image-schema.json"));
-    }
+                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("random-image-schema.json"));    }
 
     @Test
     public void testRandomImageInvalidEndpointNegative() {
